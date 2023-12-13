@@ -1,7 +1,7 @@
 const axios = require('axios');
 require('dotenv').config()
 
-const githubToken = process.env.TOKEN;
+const githubToken = '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';
 const repoOwner = 'Squifordl';
 const repoName = 'kml';
 const kmlFolderPath = 'folder';
