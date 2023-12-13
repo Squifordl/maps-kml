@@ -45,7 +45,7 @@ function MapComponent() {
             let marker;
 
             const searchBox = new window.google.maps.places.SearchBox(searchBoxRef.current);
-            map.controls[window.google.maps.ControlPosition.TOP_LEFT].push(searchBoxRef.current);
+            // map.controls[window.google.maps.ControlPosition.TOP_LEFT].push(searchBoxRef.current);
 
             searchBox.addListener('places_changed', () => {
                 const places = searchBox.getPlaces();
