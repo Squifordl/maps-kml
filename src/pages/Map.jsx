@@ -61,7 +61,7 @@ function MapComponent() {
                 const bounds = new window.google.maps.LatLngBounds();
                 places.forEach(place => {
                     if (!place.geometry) return;
-                    
+
                     marker = new window.google.maps.Marker({
                         position: place.geometry.location,
                         map: map,
@@ -82,12 +82,14 @@ function MapComponent() {
             document.head.appendChild(script);
         }
     }, [scriptURL]);
+    
     return (
         <>
-            <input ref={searchBoxRef} className="search-bar" type="text" placeholder="🔍 Pesquisar Endereço..." />
+            <div className="map-controls-container">
+                <input ref={searchBoxRef} className="search-bar" type="text" placeholder="🔍 Pesquisar Endereço..." />
+            </div>
             <div className="map-container" ref={mapRef}></div>
         </>
     );
 }
-
 export default MapComponent;
