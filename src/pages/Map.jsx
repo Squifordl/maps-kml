@@ -15,8 +15,7 @@ function MapComponent() {
                 mapTypeId: 'satellite'
             });
 
-
-            getKmlUrls().then(url => {
+            getKmlUrls.forEach(url => {
                 const kmlLayer = new window.google.maps.KmlLayer({
                     url: url,
                     map: map,

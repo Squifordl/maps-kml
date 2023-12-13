@@ -3,7 +3,7 @@ const axios = require('axios');
 const githubToken = process.env.TOKEN;
 const repoOwner = 'Squifordl';
 const repoName = 'kml';
-const kmlFolderPath = 'folder'; // Certifique-se de que este é o caminho correto da pasta dentro do repositório
+const kmlFolderPath = 'folder';
 
 async function getKmlUrls() {
     try {
@@ -12,10 +12,11 @@ async function getKmlUrls() {
                 'Authorization': `token ${githubToken}`
             }
         });
+        console.log(response)
 
         const kmlUrls = response.data
             .filter(file => file.name.endsWith('.kml') || file.name.endsWith('.kmz'))
-            .map(file => file.download_url); // Aqui usamos download_url para obter o link direto para download
+            .map(file => file.download_url);
 
         return kmlUrls;
     } catch (error) {
