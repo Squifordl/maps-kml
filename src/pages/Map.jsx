@@ -18,6 +18,8 @@ function MapComponent() {
                 try {
                     const urls = await getKmlUrls();
 
+                    console.log(urls)
+
                     urls.forEach(url => {
                         const kmlLayer = new window.google.maps.KmlLayer({
                             url: url,
