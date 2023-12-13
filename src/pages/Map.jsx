@@ -82,14 +82,15 @@ function MapComponent() {
             document.head.appendChild(script);
         }
     }, [scriptURL]);
-    
+
     return (
         <>
-            <div className="map-controls-container">
+            <div className="search-container">
                 <input ref={searchBoxRef} className="search-bar" type="text" placeholder="🔍 Pesquisar Endereço..." />
             </div>
             <div className="map-container" ref={mapRef}></div>
         </>
     );
 }
+
 export default MapComponent;
