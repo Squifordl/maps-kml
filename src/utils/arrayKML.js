@@ -51,7 +51,11 @@ const urls = [
     // 'https://raw.githubusercontent.com/Squifordl/kml/main/folder/VERA%20CRUZ%20-%20ARC.kmz.kml',
     // 'https://raw.githubusercontent.com/Squifordl/kml/main/folder/VTAL_SUL.kml',
     // 'https://raw.githubusercontent.com/Squifordl/kml/main/folder/Ven%C3%A2ncio%20Aires.kmz.kml'
-    'https://raw.githubusercontent.com/Squifordl/kml/main/Meus%20lugares.kml'
+    'https://raw.githubusercontent.com/Squifordl/kml/main/PORTO.kml',
+    'https://raw.githubusercontent.com/Squifordl/kml/main/PORTO1.kml',
+    'https://raw.githubusercontent.com/Squifordl/kml/main/PORTO2.kml',
+    'https://raw.githubusercontent.com/Squifordl/kml/main/PORTO3.kml',
+
 ]
 
 export default urls

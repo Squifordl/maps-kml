@@ -20,6 +20,7 @@ function MapComponent() {
                     const kmlLayer = new window.google.maps.KmlLayer({
                         url: url,
                         map: map,
+                        preserveViewport: true,
                     });
 
                     window.google.maps.event.addListener(kmlLayer, 'status_changed', function () {
@@ -41,6 +42,8 @@ function MapComponent() {
             const trafficLayer = new window.google.maps.TrafficLayer();
             trafficLayer.setMap(map);
 
+            let marker;
+
             const searchBox = new window.google.maps.places.SearchBox(searchBoxRef.current);
             map.controls[window.google.maps.ControlPosition.TOP_LEFT].push(searchBoxRef.current);
 
@@ -51,14 +54,25 @@ function MapComponent() {
                     return;
                 }
 
+                if (marker) {
+                    marker.setMap(null);
+                }
+
                 const bounds = new window.google.maps.LatLngBounds();
                 places.forEach(place => {
                     if (!place.geometry) return;
+                    
+                    marker = new window.google.maps.Marker({
+                        position: place.geometry.location,
+                        map: map,
+                        title: place.name,
+                    });
+
                     bounds.extend(place.geometry.location);
                 });
                 map.fitBounds(bounds);
             });
-        };
+        }
 
         if (!document.querySelector(`script[src="${scriptURL}"]`)) {
             const script = document.createElement('script');
