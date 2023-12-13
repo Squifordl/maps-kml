@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import urls from '../utils/arrayKML';
+import kmlUrls from '../utils/arrayKML';
 import './css/Map.css'
 
 function MapComponent() {
@@ -14,25 +14,17 @@ function MapComponent() {
                 center: { lat: -30.0346, lng: -51.2177 },
                 mapTypeId: 'satellite'
             });
-            const loadKmlLayers = async () => {
-                try {
-                    
-                    urls.forEach(url => {
-                        const kmlLayer = new window.google.maps.KmlLayer({
-                            url: url,
-                            map: map,
-                        });
 
-                        window.google.maps.event.addListener(kmlLayer, 'status_changed', function () {
-                            console.log(`Status do KML (${url}):`, kmlLayer.getStatus());
-                        });
-                    });
-                } catch (error) {
-                    console.error("Erro ao carregar URLs KML:", error);
-                }
-            };
+            kmlUrls.forEach(url => {
+                const kmlLayer = new window.google.maps.KmlLayer({
+                    url: url,
+                    map: map,
+                });
 
-            loadKmlLayers();
+                window.google.maps.event.addListener(kmlLayer, 'status_changed', function () {
+                    console.log(`Status do KML (${url}):`, kmlLayer.getStatus());
+                });
+            });
 
             const mapTypeControlOptions = {
                 style: window.google.maps.MapTypeControlStyle.BOTTOM_CENTER,
@@ -70,7 +62,6 @@ function MapComponent() {
             document.head.appendChild(script);
         }
     }, [scriptURL]);
-
     return (
         <>
             <input ref={searchBoxRef} className="search-bar" type="text" placeholder="🔍 Pesquisar Endereço..." />
