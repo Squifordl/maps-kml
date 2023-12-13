@@ -15,15 +15,21 @@ function MapComponent() {
                 mapTypeId: 'satellite'
             });
 
-            kmlUrls.forEach(url => {
-                const kmlLayer = new window.google.maps.KmlLayer({
-                    url: url,
-                    map: map,
-                });
+            const loadKmlLayer = (url, index) => {
+                setTimeout(() => {
+                    const kmlLayer = new window.google.maps.KmlLayer({
+                        url: url,
+                        map: map,
+                    });
 
-                window.google.maps.event.addListener(kmlLayer, 'status_changed', function () {
-                    console.log(`Status do KML (${url}):`, kmlLayer.getStatus());
-                });
+                    window.google.maps.event.addListener(kmlLayer, 'status_changed', function () {
+                        console.log(`Status do KML (${url}):`, kmlLayer.getStatus());
+                    });
+                }, 500 * index);
+            };
+
+            kmlUrls.forEach((url, index) => {
+                loadKmlLayer(url, index);
             });
 
             const mapTypeControlOptions = {
