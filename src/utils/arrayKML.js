@@ -1,13 +1,20 @@
-const kmlUrls = [
-    'https://raw.githubusercontent.com/Squifordl/kml/main/PORTO_ALEGRE.kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/ESTEIO.kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/SAPUCAIA_DO_SUL.kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/AT_TOTAL.kmz.kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/NOVO_HAMBURGO.kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/Lugares%20tempor%C3%A1rios%20(1).kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/Lugares%20tempor%C3%A1rios.kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/SAO%20LEOPOLDO.kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/SAPUCAIA_DO_SUL.kml',
-];
+const axios = require('axios');
 
-export default kmlUrls;
+const githubToken = process.env.TOKEN;
+const repoOwner = 'squifordl';
+const repoName = 'kml';
+const kmlFolderPath = 'folder';
+
+axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${kmlFolderPath}`, {
+    headers: {
+        'Authorization': `token ${githubToken}`
+    }
+}).then(response => {
+    const kmlUrls = response.data
+        .filter(file => file.name.endsWith('.kml') || file.name.endsWith('.kmz'))
+
+    console.log(kmlUrls);
+}).catch(error => {
+    console.error("Erro ao acessar o repositório:", error);
+});
+
