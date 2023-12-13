@@ -1,5 +1,4 @@
 const axios = require('axios');
-require('dotenv').config()
 
 const githubToken = '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';
 const repoOwner = 'Squifordl';
