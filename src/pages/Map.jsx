@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import kmlUrls from '../utils/arrayKML';
+import getKmlUrls from '../utils/arrayKML';
 import './css/Map.css'
 
 function MapComponent() {
@@ -15,7 +15,8 @@ function MapComponent() {
                 mapTypeId: 'satellite'
             });
 
-            kmlUrls.forEach(url => {
+
+            getKmlUrls().then(url => {
                 const kmlLayer = new window.google.maps.KmlLayer({
                     url: url,
                     map: map,
