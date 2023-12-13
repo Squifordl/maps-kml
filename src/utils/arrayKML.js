@@ -51,7 +51,7 @@ const urls = [
     // 'https://raw.githubusercontent.com/Squifordl/kml/main/folder/VERA%20CRUZ%20-%20ARC.kmz.kml',
     // 'https://raw.githubusercontent.com/Squifordl/kml/main/folder/VTAL_SUL.kml',
     // 'https://raw.githubusercontent.com/Squifordl/kml/main/folder/Ven%C3%A2ncio%20Aires.kmz.kml'
-    'https://raw.githubusercontent.com/Squifordl/kml/main/folder/LUGAR.kml'
+    'https://raw.githubusercontent.com/Squifordl/kml/main/Meus%20lugares.kml'
 ]
 
 export default urls
