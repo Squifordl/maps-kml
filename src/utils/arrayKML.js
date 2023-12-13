@@ -1,26 +1,23 @@
-const request = require('request')
+const axios = require('axios');
 
 const githubToken = process.env.TOKEN;
+const repoOwner = 'Squifordl';
+const repoName = 'kml';
+const kmlFolderPath = 'folder'; // Certifique-se de que este é o caminho correto da pasta dentro do repositório
 
 async function getKmlUrls() {
     try {
-        const URL = 'https://github.com/Squifordl/kml/tree/main/folder';
-        
-        var options = {
-          url: URL,
-          headers: {
-            'Authorization': 'token ' + githubToken
-          }
-        };
+        const response = await axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${kmlFolderPath}`, {
+            headers: {
+                'Authorization': `token ${githubToken}`
+            }
+        });
 
-        function callback(error, response, body) {
-            console.log(response.statusCode);
-            console.error(error);
-            console.log(body);
-      }
-      
-      request(options, callback);
-      
+        const kmlUrls = response.data
+            .filter(file => file.name.endsWith('.kml') || file.name.endsWith('.kmz'))
+            .map(file => file.download_url); // Aqui usamos download_url para obter o link direto para download
+
+        return kmlUrls;
     } catch (error) {
         console.error("Erro ao acessar o repositório:", error);
         return [];
