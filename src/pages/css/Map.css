@@ -27,3 +27,11 @@
     box-shadow: 0 4px 12px rgba(0, 120, 255, 0.2);
     transform: scale(1.02);
 }
+
+@media (max-width: 768px) {
+
+    .search-bar {
+        margin: 10px auto;
+        width: 90%;
+    }
+}
