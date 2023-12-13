@@ -15,7 +15,7 @@ async function getKmlUrls() {
 
         const kmlUrls = response.data
             .filter(file => file.name.endsWith('.kml') || file.name.endsWith('.kmz'))
-            .map(file => file.download_url);
+            .map(file => file.html_url);
         console.log(kmlUrls)
         return kmlUrls;
     } catch (error) {
