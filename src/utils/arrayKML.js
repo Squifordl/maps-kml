@@ -24,4 +24,4 @@ async function getKmlUrls() {
     }
 }
 
-module.exports = getKmlUrls;
+export default getKmlUrls;
