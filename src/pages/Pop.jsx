@@ -6,7 +6,8 @@ function DiscontinuedPopup() {
     <div className="popup-overlay">
       <div className="popup-container">
         <div className="popup-content">
-          <p>O site foi descontinuado.</p>
+        <div className="spinner"></div>
+          <p>O site foi descontinuado. 🤡🤡🤡</p>
         </div>
       </div>
     </div>
