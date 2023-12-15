@@ -1,4 +1,4 @@
-.popup-container {
+.popup-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,12 +8,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .popup-content {
+    z-index: 9999;
+    /* Isso coloca o popup acima de todos os outros elementos */
+}
+
+.popup-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
+    z-index: 10000;
+    /* Certifique-se de que o conteúdo do popup esteja acima do overlay */
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
