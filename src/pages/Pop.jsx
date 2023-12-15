@@ -1,5 +1,5 @@
 import React from 'react';
-import './DiscontinuedPopup.css';
+import './css/Pop.css';
 
 function DiscontinuedPopup() {
   return (
