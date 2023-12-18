@@ -5,8 +5,24 @@ import './css/Map.css'
 function MapComponent() {
     const mapRef = useRef(null);
     const searchBoxRef = useRef(null);
-    const scriptURL = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDslUlwET6q743dgoKMa2BD-gfpIF_4vUo&libraries=places&callback=initMap`;
+    const scriptURL = `https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_AQUI&libraries=places&callback=initMap`;
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                searchBoxRef.current.style.display = 'none';
+            } else {
+                searchBoxRef.current.style.display = 'block';
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+    
     useEffect(() => {
         window.initMap = function () {
             const map = new window.google.maps.Map(mapRef.current, {
