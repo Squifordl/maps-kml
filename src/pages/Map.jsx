@@ -6,12 +6,13 @@ import './css/Map.css';
 function MapComponent() {
     const mapRef = useRef(null);
     const searchBoxRef = useRef(null);
-    const scriptURL = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDslUlwET6q743dgoKMa2BD-gfpIF_4vUo&libraries=places&callback=initMap`;
+    const scriptURL = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap`;
     const [showPopup, setShowPopup] = useState(false);
     const [cep, setCep] = useState('');
     const [numeroCasa, setNumeroCasa] = useState('');
     const [viab, setViab] = useState(false);
     const [viabi, setViabi] = useState(false);
+    const [mapInitialized, setMapInitialized] = useState(false);
 
     const handleViabilidadeClick = () => {
         setShowPopup(true);
@@ -25,6 +26,12 @@ function MapComponent() {
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
+
+        if (!mapInitialized) {
+            // Map is not initialized yet, wait and try again
+            setTimeout(() => handleFormSubmit(e), 500);
+            return;
+        }
 
         try {
             const response = await axios.get(`https://api.amxrest.net/viability/${cep}/${numeroCasa}`);
@@ -49,10 +56,10 @@ function MapComponent() {
         setShowPopup(false);
     };
 
-
     useEffect(() => {
         setViabi(false);
         window.initMap = function () {
+            setMapInitialized(true);
             const map = new window.google.maps.Map(mapRef.current, {
                 zoom: 11,
                 center: { lat: -30.0346, lng: -51.2177 },
