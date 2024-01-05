@@ -132,10 +132,10 @@ function MapComponent() {
                     </div>
                 </div>
             )}
+            <div className="button-container">
+                <button onClick={handleViabilidadeClick}>Verificar Viabilidade</button>
+            </div>
             <div className="map-container" ref={mapRef}>
-                <div className="button-container">
-                    <button onClick={handleViabilidadeClick}>Verificar Viabilidade</button>
-                </div>
             </div>
             <div className="search-container">
                 <input ref={searchBoxRef} className="search-bar" type="text" placeholder="🔍 Pesquisar Endereço..." />
