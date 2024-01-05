@@ -29,7 +29,7 @@ function MapComponent() {
 
             setViabi(true);
 
-            console.log(response.data)
+            console.log(response.data.data)
             if (response.data.data.technologies.some(tech =>
                 tech.name === 'Cable' && tech.tv && tech.phone && tech.internet)) {
                 setViab(true);
