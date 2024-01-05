@@ -22,6 +22,7 @@ function MapComponent() {
     };
 
     const handleFormSubmit = async (e) => {
+        setViabi(false);
         e.preventDefault();
 
         try {
