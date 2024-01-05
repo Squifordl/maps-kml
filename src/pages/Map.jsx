@@ -121,6 +121,7 @@ function MapComponent() {
                     </span>
                     {viabilityData ? (
                         <div>
+                            {console.log(viabilityData)}
                             <h3>Dados da Viabilidade:</h3>
                             <p>Bairro: {viabilityData.bairro}</p>
                             <p>CEP: {viabilityData.cep}</p>
