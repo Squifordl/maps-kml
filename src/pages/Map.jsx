@@ -10,8 +10,8 @@ function MapComponent() {
     const [showPopup, setShowPopup] = useState(false);
     const [cep, setCep] = useState('');
     const [numeroCasa, setNumeroCasa] = useState('');
-    const [viab, setViab] = useState(false)
-    const [viabi, setViabi] = useState(false)
+    const [viab, setViab] = useState(false);
+    const [viabi, setViabi] = useState(false);
 
     const handleViabilidadeClick = () => {
         setShowPopup(true);
@@ -21,28 +21,27 @@ function MapComponent() {
         setShowPopup(false);
     };
 
-    setViabi(false)
-
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
         try {
             const response = await axios.get(`https://api.amxrest.net/viability/${cep}/${numeroCasa}`);
 
-            setViabi(true)
+            setViabi(true);
+
             if (response.data.technologies.some(tech =>
                 tech.name === 'Cable' && tech.tv && tech.phone && tech.internet)) {
                 setViab(true);
             } else {
                 setViab(false);
             }
-
         } catch (error) {
             console.error('Erro na requisição da API:', error);
             setViab(false);
         }
         setShowPopup(false);
     };
+
     useEffect(() => {
         setViabi(false);
         window.initMap = function () {
