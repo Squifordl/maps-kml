@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import axios from 'axios';
 import kmlUrls from '../utils/arrayKML';
 import './css/Map.css'
 
@@ -6,6 +7,31 @@ function MapComponent() {
     const mapRef = useRef(null);
     const searchBoxRef = useRef(null);
     const scriptURL = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDslUlwET6q743dgoKMa2BD-gfpIF_4vUo&libraries=places&callback=initMap`;
+    const [showPopup, setShowPopup] = useState(false);
+    const [cep, setCep] = useState('');
+    const [numeroCasa, setNumeroCasa] = useState('');
+
+    const handleViabilidadeClick = () => {
+        setShowPopup(true);
+    };
+
+    const handlePopupClose = () => {
+        setShowPopup(false);
+    };
+
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await axios.get(`https://api.amxrest.net/viability/${cep}/${numeroCasa}`);
+
+            console.log('Resposta da API:', response.data);
+        } catch (error) {
+            console.error('Erro na requisição da API:', error);
+        }
+
+        setShowPopup(false);
+    };
 
     useEffect(() => {
         window.initMap = function () {
@@ -45,7 +71,6 @@ function MapComponent() {
             let marker;
 
             const searchBox = new window.google.maps.places.SearchBox(searchBoxRef.current);
-            // map.controls[window.google.maps.ControlPosition.TOP_LEFT].push(searchBoxRef.current);
 
             searchBox.addListener('places_changed', () => {
                 const places = searchBox.getPlaces();
@@ -83,8 +108,38 @@ function MapComponent() {
         }
     }, [scriptURL]);
 
+
     return (
         <>
+            <div className="button-container">
+                <button onClick={handleViabilidadeClick}>Verificar Viabilidade</button>
+            </div>
+            {showPopup && (
+                <div className="popup-container">
+                    <div className="popup-content">
+                        <span className="close-popup" onClick={handlePopupClose}>
+                            &times;
+                        </span>
+                        <form onSubmit={handleFormSubmit}>
+                            <label htmlFor="cep">CEP:</label>
+                            <input
+                                type="text"
+                                id="cep"
+                                value={cep}
+                                onChange={(e) => setCep(e.target.value)}
+                            />
+                            <label htmlFor="numeroCasa">Número da Casa:</label>
+                            <input
+                                type="text"
+                                id="numeroCasa"
+                                value={numeroCasa}
+                                onChange={(e) => setNumeroCasa(e.target.value)}
+                            />
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            )}
             <div className="search-container">
                 <input ref={searchBoxRef} className="search-bar" type="text" placeholder="🔍 Pesquisar Endereço..." />
             </div>
