@@ -114,27 +114,25 @@ function MapComponent() {
             <div className="button-container">
                 <button onClick={handleViabilidadeClick}>Verificar Viabilidade</button>
             </div>
-            {showPopup && (
-                <div className="popup-container">
-                    <div className="popup-content">
-                        <span className="close-popup" onClick={handlePopupClose}>
-                            &times;
-                        </span>
-                        <form onSubmit={handleFormSubmit}>
-                            <label htmlFor="cep">CEP:</label>
-                            <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
-                            <label htmlFor="numeroCasa">Número da Casa:</label>
-                            <input
-                                type="text"
-                                id="numeroCasa"
-                                value={numeroCasa}
-                                onChange={(e) => setNumeroCasa(e.target.value)}
-                            />
-                            <button type="submit">Enviar</button>
-                        </form>
-                    </div>
+            <div className={`popup-container ${showPopup ? 'visible' : ''}`}>
+                <div className="popup-content">
+                    <span className="close-popup" onClick={handlePopupClose}>
+                        &times;
+                    </span>
+                    <form onSubmit={handleFormSubmit}>
+                        <label htmlFor="cep">CEP:</label>
+                        <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
+                        <label htmlFor="numeroCasa">Número da Casa:</label>
+                        <input
+                            type="text"
+                            id="numeroCasa"
+                            value={numeroCasa}
+                            onChange={(e) => setNumeroCasa(e.target.value)}
+                        />
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
-            )}
+            </div>
             <div className="map-container" ref={mapRef}>
             </div>
             <div className="search-container">

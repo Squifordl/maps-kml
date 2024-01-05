@@ -61,7 +61,6 @@
 }
 
 .popup-container {
-    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -71,7 +70,16 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
 }
+
+.popup-container.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 .popup-content {
     position: relative;
