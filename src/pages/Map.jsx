@@ -19,18 +19,20 @@ function MapComponent() {
 
     const handlePopupClose = () => {
         setShowPopup(false);
+        setViab(false);
+        setViabi(false);
     };
 
     const handleFormSubmit = async (e) => {
-        setViabi(false);
         e.preventDefault();
 
         try {
             const response = await axios.get(`https://api.amxrest.net/viability/${cep}/${numeroCasa}`);
 
+            console.log('Response Data:', response.data);
+
             setViabi(true);
 
-            console.log(response.data.data)
             if (response.data.data.technologies.some(tech =>
                 tech.name === 'Cable' && tech.tv && tech.phone && tech.internet)) {
                 setViab(true);
@@ -43,6 +45,7 @@ function MapComponent() {
         }
         setShowPopup(false);
     };
+
 
     useEffect(() => {
         setViabi(false);
