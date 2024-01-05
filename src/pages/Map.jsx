@@ -10,7 +10,8 @@ function MapComponent() {
     const [showPopup, setShowPopup] = useState(false);
     const [cep, setCep] = useState('');
     const [numeroCasa, setNumeroCasa] = useState('');
-    const [viabilityData, setViabilityData] = useState(null);
+    const [viab, setViab] = useState(false)
+    const [viabi, setViabi] = useState(false)
 
     const handleViabilidadeClick = () => {
         setShowPopup(true);
@@ -20,19 +21,28 @@ function MapComponent() {
         setShowPopup(false);
     };
 
+    setViabi(false)
+
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
         try {
             const response = await axios.get(`https://api.amxrest.net/viability/${cep}/${numeroCasa}`);
 
+            setViabi(true)
+            if (response.data.technologies.some(tech =>
+                tech.name === 'Cable' && tech.tv && tech.phone && tech.internet)) {
+                setViab(true);
+            } else {
+                setViab(false);
+            }
 
-            console.log(response.data)
-            setViabilityData(response.data);
         } catch (error) {
             console.error('Erro na requisição da API:', error);
+            setViab(false);
         }
-    }
+        setShowPopup(false);
+    };
     useEffect(() => {
         window.initMap = function () {
             const map = new window.google.maps.Map(mapRef.current, {
@@ -119,14 +129,16 @@ function MapComponent() {
                     <span className="close-popup" onClick={handlePopupClose}>
                         &times;
                     </span>
-                    {viabilityData ? (
-                        <div>
-                            {console.log(viabilityData)}
-                            <h3>Dados da Viabilidade:</h3>
-                            <p>Bairro: {viabilityData.bairro}</p>
-                            <p>CEP: {viabilityData.cep}</p>
-                            {/* Add other fields as necessary */}
-                        </div>
+                    {viabi ? (
+                        viab ? (
+                            <div>
+                                <h3 className="viab-message">Seu endereço está viável</h3>
+                            </div>
+                        ) : (
+                            <div>
+                                <h3 className="viab-message">Seu endereço não está viável</h3>
+                            </div>
+                        )
                     ) : (
                         <form onSubmit={handleFormSubmit}>
                             <label htmlFor="cep">CEP:</label>
