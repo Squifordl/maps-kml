@@ -12,7 +12,6 @@ function MapComponent() {
     const [numeroCasa, setNumeroCasa] = useState('');
     const [viab, setViab] = useState(false);
     const [viabi, setViabi] = useState(false);
-    const [mapInitialized, setMapInitialized] = useState(false);
 
     const handleViabilidadeClick = () => {
         setShowPopup(true);
@@ -26,12 +25,6 @@ function MapComponent() {
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
-
-        if (!mapInitialized) {
-            // Map is not initialized yet, wait and try again
-            setTimeout(() => handleFormSubmit(e), 500);
-            return;
-        }
 
         try {
             const response = await axios.get(`https://api.amxrest.net/viability/${cep}/${numeroCasa}`);
@@ -57,9 +50,7 @@ function MapComponent() {
     };
 
     useEffect(() => {
-        setViabi(false);
         window.initMap = function () {
-            setMapInitialized(true);
             const map = new window.google.maps.Map(mapRef.current, {
                 zoom: 11,
                 center: { lat: -30.0346, lng: -51.2177 },
@@ -132,7 +123,6 @@ function MapComponent() {
             document.head.appendChild(script);
         }
     }, [scriptURL]);
-
 
     return (
         <>
