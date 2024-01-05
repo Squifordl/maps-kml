@@ -111,9 +111,6 @@ function MapComponent() {
 
     return (
         <>
-            <div className="button-container">
-                <button onClick={handleViabilidadeClick}>Verificar Viabilidade</button>
-            </div>
             {showPopup && (
                 <div className="popup-container">
                     <div className="popup-content">
@@ -122,12 +119,7 @@ function MapComponent() {
                         </span>
                         <form onSubmit={handleFormSubmit}>
                             <label htmlFor="cep">CEP:</label>
-                            <input
-                                type="text"
-                                id="cep"
-                                value={cep}
-                                onChange={(e) => setCep(e.target.value)}
-                            />
+                            <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
                             <label htmlFor="numeroCasa">Número da Casa:</label>
                             <input
                                 type="text"
@@ -140,10 +132,14 @@ function MapComponent() {
                     </div>
                 </div>
             )}
+            <div className="map-container" ref={mapRef}>
+                <div className="button-container">
+                    <button onClick={handleViabilidadeClick}>Verificar Viabilidade</button>
+                </div>
+            </div>
             <div className="search-container">
                 <input ref={searchBoxRef} className="search-bar" type="text" placeholder="🔍 Pesquisar Endereço..." />
             </div>
-            <div className="map-container" ref={mapRef}></div>
         </>
     );
 }
