@@ -87,7 +87,6 @@
 
 .close-popup {
     position: absolute;
-    top: 10px;
     right: 10px;
     font-size: 20px;
     cursor: pointer;
@@ -104,7 +103,7 @@
 }
 
 .popup-container input {
-    width: 100%;
+    width: 75%;
     padding: 8px;
     margin-bottom: 8px;
     border: 1px solid #ccc;
