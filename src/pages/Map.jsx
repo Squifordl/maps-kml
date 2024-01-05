@@ -111,6 +111,9 @@ function MapComponent() {
 
     return (
         <>
+            <div className="button-container">
+                <button onClick={handleViabilidadeClick}>Verificar Viabilidade</button>
+            </div>
             {showPopup && (
                 <div className="popup-container">
                     <div className="popup-content">
@@ -132,9 +135,6 @@ function MapComponent() {
                     </div>
                 </div>
             )}
-            <div className="button-container">
-                <button onClick={handleViabilidadeClick}>Verificar Viabilidade</button>
-            </div>
             <div className="map-container" ref={mapRef}>
             </div>
             <div className="search-container">
