@@ -6,7 +6,7 @@ import './css/Map.css';
 function MapComponent() {
     const mapRef = useRef(null);
     const searchBoxRef = useRef(null);
-    const scriptURL = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap`;
+    const scriptURL = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDslUlwET6q743dgoKMa2BD-gfpIF_4vUo&libraries=places&callback=initMap`;
     const [showPopup, setShowPopup] = useState(false);
     const [cep, setCep] = useState('');
     const [numeroCasa, setNumeroCasa] = useState('');
