@@ -44,6 +44,7 @@ function MapComponent() {
         setShowPopup(false);
     };
     useEffect(() => {
+        setViabi(false);
         window.initMap = function () {
             const map = new window.google.maps.Map(mapRef.current, {
                 zoom: 11,
