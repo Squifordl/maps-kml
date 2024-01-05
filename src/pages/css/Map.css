@@ -84,12 +84,6 @@
     position: relative;
 }
 
-.popup-container h3 {
-    color: #007bff;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
 .close-popup {
     position: absolute;
     right: 10px;
