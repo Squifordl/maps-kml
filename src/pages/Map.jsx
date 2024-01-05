@@ -36,9 +36,12 @@ function MapComponent() {
             if (response.data.data.technologies.some(tech =>
                 tech.name === 'Cable' && tech.tv && tech.phone && tech.internet)) {
                 setViab(true);
+                console.log('Viab set to true');
             } else {
                 setViab(false);
+                console.log('Viab set to false');
             }
+
         } catch (error) {
             console.error('Erro na requisição da API:', error);
             setViab(false);
