@@ -7,9 +7,9 @@ function MapComponent() {
     const mapRef = useRef(null);
     const searchBoxRef = useRef(null);
     const scriptURL = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDslUlwET6q743dgoKMa2BD-gfpIF_4vUo&libraries=places&callback=initMap`;
+    const [showPopup, setShowPopup] = useState(false);
     const [cep, setCep] = useState('');
     const [numeroCasa, setNumeroCasa] = useState('');
-    const [showPopup, setShowPopup] = useState(false);
     const [viabilityData, setViabilityData] = useState(null);
 
     const handleViabilidadeClick = () => {
@@ -26,16 +26,13 @@ function MapComponent() {
         try {
             const response = await axios.get(`https://api.amxrest.net/viability/${cep}/${numeroCasa}`);
 
-            console.log('Resposta da API:', response.data);
 
             setViabilityData(response.data);
-            setShowPopup(true);
-
+            console.log(viabilityData)
         } catch (error) {
             console.error('Erro na requisição da API:', error);
         }
-    };
-
+    }
     useEffect(() => {
         window.initMap = function () {
             const map = new window.google.maps.Map(mapRef.current, {
@@ -117,39 +114,34 @@ function MapComponent() {
             <div className="button-container">
                 <button onClick={handleViabilidadeClick}>Verificar Viabilidade</button>
             </div>
-            {showPopup && (
-                <div className="popup-container">
-                    <div className="popup-content">
-                        <span className="close-popup" onClick={handlePopupClose}>
-                            &times;
-                        </span>
+            <div className={`popup-container ${showPopup ? 'visible' : ''}`}>
+                <div className="popup-content">
+                    <span className="close-popup" onClick={handlePopupClose}>
+                        &times;
+                    </span>
+                    {viabilityData ? (
                         <div>
-                            {viabilityData ? (
-                                <>
-                                    <h3>Dados da Viabilidade:</h3>
-                                    <p>Bairro: {viabilityData.bairro}</p>
-                                    <p>CEP: {viabilityData.cep}</p>
-                                    {/* Add other fields as needed */}
-                                </>
-                            ) : (
-                                <form onSubmit={handleFormSubmit}>
-                                    <label htmlFor="cep">CEP:</label>
-                                    <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
-                                    <label htmlFor="numeroCasa">Número da Casa:</label>
-                                    <input
-                                        type="text"
-                                        id="numeroCasa"
-                                        value={numeroCasa}
-                                        onChange={(e) => setNumeroCasa(e.target.value)}
-                                    />
-                                    <button type="submit">Enviar</button>
-                                </form>
-                            )}
-                            <button onClick={handlePopupClose}>Fechar</button>
+                            <h3>Dados da Viabilidade:</h3>
+                            <p>Bairro: {viabilityData.bairro}</p>
+                            <p>CEP: {viabilityData.cep}</p>
+                            {/* Add other fields as necessary */}
                         </div>
-                    </div>
+                    ) : (
+                        <form onSubmit={handleFormSubmit}>
+                            <label htmlFor="cep">CEP:</label>
+                            <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
+                            <label htmlFor="numeroCasa">Número da Casa:</label>
+                            <input
+                                type="text"
+                                id="numeroCasa"
+                                value={numeroCasa}
+                                onChange={(e) => setNumeroCasa(e.target.value)}
+                            />
+                            <button type="submit">Enviar</button>
+                        </form>
+                    )}
                 </div>
-            )}
+            </div>
             <div className="map-container" ref={mapRef}>
             </div>
             <div className="search-container">
@@ -157,7 +149,6 @@ function MapComponent() {
             </div>
         </>
     );
-
 }
 
 export default MapComponent;
