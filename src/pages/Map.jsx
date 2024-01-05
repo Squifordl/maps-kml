@@ -27,8 +27,8 @@ function MapComponent() {
             const response = await axios.get(`https://api.amxrest.net/viability/${cep}/${numeroCasa}`);
 
 
+            console.log(response.data)
             setViabilityData(response.data);
-            console.log(viabilityData)
         } catch (error) {
             console.error('Erro na requisição da API:', error);
         }
