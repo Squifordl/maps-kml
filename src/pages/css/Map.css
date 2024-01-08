@@ -160,4 +160,18 @@
     .search-bar {
         width: 90%;
     }
+
+    .popup-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .popup-container label,
+    .popup-container input {
+        width: 100%;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
 }
