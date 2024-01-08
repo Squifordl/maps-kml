@@ -28,7 +28,7 @@ function MapComponent() {
         setShowPopup(false);
         setViab(false);
         setViabi(false);
-        setShowForm(false); 
+        setShowForm(false);
     };
 
     const handleNewConsulta = () => {
@@ -175,13 +175,16 @@ function MapComponent() {
                             <div>
                                 <h3 className="viab-message">Seu endereço está viável</h3>
                                 <p>{`Logradouro: ${enderecoViacep.logradouro}`}</p>
-                                <p>{`Logradouro: ${enderecoViacep.numero}`}</p>
+                                <p>{`Logradouro: ${numeroCasa}`}</p>
                                 <p>{`Bairro: ${enderecoViacep.bairro}`}</p>
                                 <p>{`Cidade: ${enderecoViacep.cidade}`}</p>
                                 <p>{`UF: ${enderecoViacep.uf}`}</p>
-                                <div>
+                                <div className="button-container">
                                     <button type="button" onClick={handleNewConsulta}>
                                         Nova Consulta
+                                    </button>
+                                    <button type="button" onClick={handlePopupClose}>
+                                        Fechar
                                     </button>
                                 </div>
                                 {showForm && (
@@ -195,8 +198,8 @@ function MapComponent() {
                                             value={numeroCasa}
                                             onChange={(e) => setNumeroCasa(e.target.value)}
                                         />
-                                        <button type="submit">Enviar</button>
-                                        <div>
+                                        <div className="button-container">
+                                            <button type="submit">Enviar</button>
                                             <button type="button" onClick={handlePopupClose}>
                                                 Fechar
                                             </button>
@@ -207,6 +210,14 @@ function MapComponent() {
                         ) : (
                             <div>
                                 <h3 className="viab-message">Seu endereço não está viável</h3>
+                                <div className="button-container">
+                                    <button type="button" onClick={handleNewConsulta}>
+                                        Nova Consulta
+                                    </button>
+                                    <button type="button" onClick={handlePopupClose}>
+                                        Fechar
+                                    </button>
+                                </div>
                             </div>
                         )
                     ) : (
@@ -220,8 +231,8 @@ function MapComponent() {
                                 value={numeroCasa}
                                 onChange={(e) => setNumeroCasa(e.target.value)}
                             />
-                            <button type="submit">Enviar</button>
-                            <div>
+                            <div className="button-container">
+                                <button type="submit">Enviar</button>
                                 <button type="button" onClick={handlePopupClose}>
                                     Fechar
                                 </button>

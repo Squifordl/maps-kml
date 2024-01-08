@@ -130,9 +130,4 @@
     .search-bar {
         width: 90%;
     }
-
-    .button-container,
-    .search-container {
-        top: 5px;
-    }
 }
