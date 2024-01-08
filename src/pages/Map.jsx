@@ -174,6 +174,12 @@ function MapComponent() {
                                 <p>{`Bairro: ${enderecoViacep.bairro}`}</p>
                                 <p>{`Cidade: ${enderecoViacep.cidade}`}</p>
                                 <p>{`UF: ${enderecoViacep.uf}`}</p>
+                                {/* Adicionar o botão "Nova Consulta" */}
+                                <div>
+                                    <button type="button" onClick={handleNewConsulta}>
+                                        Nova Consulta
+                                    </button>
+                                </div>
                             </div>
                         ) : (
                             <div>
@@ -195,9 +201,6 @@ function MapComponent() {
                             <div>
                                 <button type="button" onClick={handlePopupClose}>
                                     Fechar
-                                </button>
-                                <button type="button" onClick={handleNewConsulta}>
-                                    Nova Consulta
                                 </button>
                             </div>
                         </form>
