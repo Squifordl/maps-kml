@@ -84,16 +84,10 @@
     position: relative;
 }
 
-.question-container {
-    width: 50%;
-    height: 290px;
-    margin-top: 130px;
-}
-
+.question-container,
 .response-container {
     width: 50%;
-    height: 290px;
-    margin-top: 130px;
+    height: auto;
 }
 
 .button-container {
@@ -111,6 +105,15 @@
 .button-container button:first-child {
     margin-right: 2%;
 }
+
+.question-container.hidden {
+    display: none;
+}
+
+.response-container.visible {
+    display: block;
+}
+
 
 .close-popup {
     position: absolute;
