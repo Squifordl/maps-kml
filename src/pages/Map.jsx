@@ -28,7 +28,7 @@ function MapComponent() {
         setShowPopup(false);
         setViab(false);
         setViabi(false);
-        setShowForm(false);
+        setShowForm(false); 
     };
 
     const handleNewConsulta = () => {
@@ -51,7 +51,8 @@ function MapComponent() {
             const enderecoResponse = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
             const dadosViacep = enderecoResponse.data;
 
-            console.log('Response Data:', response.data);
+
+            console.log('Response Data:', dadosViacep);
 
             if (mapRef.current) {
                 setViabi(true);
