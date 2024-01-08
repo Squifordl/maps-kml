@@ -12,6 +12,12 @@ function MapComponent() {
     const [numeroCasa, setNumeroCasa] = useState('');
     const [viab, setViab] = useState(false);
     const [viabi, setViabi] = useState(false);
+    const [enderecoViacep, setEnderecoViacep] = useState({
+        logradouro: '',
+        bairro: '',
+        cidade: '',
+        uf: '',
+    });
 
     const handleViabilidadeClick = () => {
         setShowPopup(true);
@@ -23,6 +29,13 @@ function MapComponent() {
         setViabi(false);
     };
 
+    const handleNewConsulta = () => {
+        setCep('');
+        setNumeroCasa('');
+        setShowPopup(false);
+        setViab(false);
+        setViabi(false);
+    };
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
@@ -31,9 +44,11 @@ function MapComponent() {
                 `https://api.amxrest.net/viability/${cep}/${numeroCasa}`
             );
 
+            const enderecoResponse = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+            const dadosViacep = enderecoResponse.data;
+
             console.log('Response Data:', response.data);
 
-            // Verificar se o componente ainda está montado
             if (mapRef.current) {
                 setViabi(true);
 
@@ -49,6 +64,13 @@ function MapComponent() {
                     console.log('Viab set to false');
                 }
 
+                setEnderecoViacep({
+                    logradouro: dadosViacep.logradouro || response.data.data.logradouro,
+                    bairro: dadosViacep.bairro || response.data.data.bairro,
+                    cidade: dadosViacep.localidade || response.data.data.cidade,
+                    uf: dadosViacep.uf || response.data.data.uf,
+                });
+
                 setShowPopup(true);
             }
         } catch (error) {
@@ -57,7 +79,6 @@ function MapComponent() {
             setShowPopup(true);
         }
     };
-
 
     useEffect(() => {
         window.initMap = function () {
@@ -148,6 +169,11 @@ function MapComponent() {
                         viab ? (
                             <div>
                                 <h3 className="viab-message">Seu endereço está viável</h3>
+                                {/* Mostrar os dados do endereço */}
+                                <p>{`Logradouro: ${enderecoViacep.logradouro}`}</p>
+                                <p>{`Bairro: ${enderecoViacep.bairro}`}</p>
+                                <p>{`Cidade: ${enderecoViacep.cidade}`}</p>
+                                <p>{`UF: ${enderecoViacep.uf}`}</p>
                             </div>
                         ) : (
                             <div>
@@ -166,10 +192,18 @@ function MapComponent() {
                                 onChange={(e) => setNumeroCasa(e.target.value)}
                             />
                             <button type="submit">Enviar</button>
+                            <div>
+                                <button type="button" onClick={handlePopupClose}>
+                                    Fechar
+                                </button>
+                                <button type="button" onClick={handleNewConsulta}>
+                                    Nova Consulta
+                                </button>
+                            </div>
                         </form>
                     )}
                 </div>
-            </div>
+            </div >
             <div className="map-container" ref={mapRef}>
             </div>
             <div className="search-container">
