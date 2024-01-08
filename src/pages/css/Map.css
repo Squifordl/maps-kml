@@ -73,8 +73,8 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
-    width: 40%;
-    height: 200px;
+    width: 90%;
+    max-width: 400px;
 }
 
 .popup-container.visible {
@@ -96,31 +96,34 @@
 
 .button-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
 .button-container button {
-    flex: 1;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .close-popup {
     position: absolute;
     right: 10px;
+    top: 10px;
     font-size: 20px;
     cursor: pointer;
 }
 
 .popup-container form .button-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
 .popup-container form .button-container button {
-    flex: 1;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .popup-container label {
@@ -130,7 +133,7 @@
 }
 
 .popup-container input {
-    width: 60%;
+    width: 100%;
     padding: 8px;
     margin-bottom: 8px;
     border: 1px solid #ccc;
@@ -138,7 +141,7 @@
 }
 
 .popup-container button {
-    flex: 1;
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     background-color: #007bff;
