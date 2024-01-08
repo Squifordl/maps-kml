@@ -27,7 +27,6 @@
     border-radius: 4px;
     cursor: pointer;
     z-index: 10;
-
 }
 
 .button-container button:hover {
@@ -105,8 +104,8 @@
 }
 
 .popup-container form .button-container button {
-    width: 48%;
-    margin-top: 20px;
+    flex: 1;
+    margin: 0 2px;
 }
 
 .popup-container form .button-container button:first-child {
