@@ -73,20 +73,38 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
-    width: 40%;
-    height: 180px
 }
 
 .popup-container.visible {
     visibility: visible;
     opacity: 1;
-    width: 50%;
-    height: 290px;
-    margin-top: 130px;
 }
 
 .popup-content {
     position: relative;
+}
+
+.question-container,
+.response-container {
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    flex: 1;
+    margin: 0 2px;
+}
+
+.button-container button:first-child {
+    margin-right: 2%;
 }
 
 .close-popup {

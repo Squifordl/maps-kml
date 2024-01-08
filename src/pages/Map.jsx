@@ -172,7 +172,7 @@ function MapComponent() {
                     </span>
                     {viabi ? (
                         viab ? (
-                            <div>
+                            <div className="response-container">
                                 <h3 className="viab-message">Seu endereço está viável</h3>
                                 <div className="address-info">
                                     <p>{`Logradouro: ${enderecoViacep.logradouro}`}</p>
@@ -210,7 +210,7 @@ function MapComponent() {
                                 )}
                             </div>
                         ) : (
-                            <div>
+                            <div className="response-container">
                                 <h3 className="viab-message">Seu endereço não está viável</h3>
                                 <div className="button-container">
                                     <button type="button" onClick={handleNewConsulta}>
@@ -223,23 +223,25 @@ function MapComponent() {
                             </div>
                         )
                     ) : (
-                        <form onSubmit={handleFormSubmit}>
-                            <label htmlFor="cep">CEP:</label>
-                            <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
-                            <label htmlFor="numeroCasa">Número da Casa:</label>
-                            <input
-                                type="text"
-                                id="numeroCasa"
-                                value={numeroCasa}
-                                onChange={(e) => setNumeroCasa(e.target.value)}
-                            />
-                            <div className="button-container">
-                                <button type="submit">Enviar</button>
-                                <button type="button" onClick={handlePopupClose}>
-                                    Fechar
-                                </button>
-                            </div>
-                        </form>
+                        <div className="question-container">
+                            <form onSubmit={handleFormSubmit}>
+                                <label htmlFor="cep">CEP:</label>
+                                <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
+                                <label htmlFor="numeroCasa">Número da Casa:</label>
+                                <input
+                                    type="text"
+                                    id="numeroCasa"
+                                    value={numeroCasa}
+                                    onChange={(e) => setNumeroCasa(e.target.value)}
+                                />
+                                <div className="button-container">
+                                    <button type="submit">Enviar</button>
+                                    <button type="button" onClick={handlePopupClose}>
+                                        Fechar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     )}
                 </div>
             </div>
