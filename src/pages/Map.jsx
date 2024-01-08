@@ -183,9 +183,6 @@ function MapComponent() {
                                     <button type="button" onClick={handleNewConsulta}>
                                         Consultar
                                     </button>
-                                    <button type="button" onClick={handlePopupClose}>
-                                        Fechar
-                                    </button>
                                 </div>
                                 {showForm && (
                                     <form onSubmit={handleFormSubmit}>
@@ -200,9 +197,6 @@ function MapComponent() {
                                         />
                                         <div className="button-container">
                                             <button type="submit">Enviar</button>
-                                            <button type="button" onClick={handlePopupClose}>
-                                                Fechar
-                                            </button>
                                         </div>
                                     </form>
                                 )}
@@ -213,9 +207,6 @@ function MapComponent() {
                                 <div className="button-container">
                                     <button type="button" onClick={handleNewConsulta}>
                                         Consultar
-                                    </button>
-                                    <button type="button" onClick={handlePopupClose}>
-                                        Fechar
                                     </button>
                                 </div>
                             </div>
@@ -234,9 +225,6 @@ function MapComponent() {
                                 />
                                 <div className="button-container">
                                     <button type="submit">Enviar</button>
-                                    <button type="button" onClick={handlePopupClose}>
-                                        Fechar
-                                    </button>
                                 </div>
                             </form>
                         </div>
