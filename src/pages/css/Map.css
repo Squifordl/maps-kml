@@ -91,10 +91,10 @@
     cursor: pointer;
 }
 
-.popup-container form {
-    margin-top: 20px;
+.popup-container form .button-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .popup-container label {
