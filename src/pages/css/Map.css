@@ -73,6 +73,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
+    width: 50%;
 }
 
 .popup-container.visible {
@@ -86,7 +87,7 @@
 
 .question-container,
 .response-container {
-    width: 50%;
+    width: 100%;
     height: auto;
     margin-top: 20px;
 }
@@ -133,7 +134,7 @@
 }
 
 .popup-container input {
-    width: 75%;
+    width: 100%;
     padding: 8px;
     margin-bottom: 8px;
     border: 1px solid #ccc;
@@ -155,6 +156,7 @@
 .popup-container button:hover {
     background-color: #0056b3;
 }
+
 
 @media (max-width: 768px) {
     .search-bar {
