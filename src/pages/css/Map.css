@@ -73,7 +73,8 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
-    width: 50%;
+    width: 40%;
+    height: 200px;
 }
 
 .popup-container.visible {

@@ -177,9 +177,7 @@ function MapComponent() {
                                 <div className="address-info">
                                     <p>{`Logradouro: ${enderecoViacep.logradouro}`}</p>
                                     <p>{`Número: ${numeroCasa}`}</p>
-                                    <p>{`Bairro: ${enderecoViacep.bairro}`}</p>
-                                    <p>{`Cidade: ${enderecoViacep.cidade}`}</p>
-                                    <p>{`UF: ${enderecoViacep.uf}`}</p>
+                                    <p>{`Cep: ${cep}`}</p>
                                 </div>
                                 <div className="button-container">
                                     <button type="button" onClick={handleNewConsulta}>
