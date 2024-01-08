@@ -13,7 +13,7 @@
 
 .button-container {
     position: absolute;
-    top: 10px;
+    top: 105px;
     left: 10px;
     z-index: 5;
 }
@@ -35,7 +35,7 @@
 
 .search-container {
     position: absolute;
-    top: 10px;
+    top: 55px;
     left: 10px;
     right: 0;
     z-index: 5;
@@ -43,8 +43,9 @@
 
 .search-bar {
     margin: auto;
-    padding: 0 10px;
-    width: calc(100% - 20px);
+    padding: 0 23px;
+    width: 300px;
+    max-width: 85%;
     height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -101,7 +102,7 @@
 }
 
 .popup-container input {
-    width: 100%;
+    width: 75%;
     padding: 8px;
     margin-bottom: 8px;
     border: 1px solid #ccc;
@@ -118,8 +119,8 @@
     cursor: pointer;
     margin: 0 auto;
     display: block;
-    margin-top: 10px;
 }
+
 
 .popup-container button:hover {
     background-color: #0056b3;
