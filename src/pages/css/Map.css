@@ -127,14 +127,13 @@
 
 .popup-container form .button-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 }
 
 .popup-container form .button-container button {
-    width: 100%;
-    margin-top: 10px;
+    flex: 1;
 }
 
 .popup-container label {
