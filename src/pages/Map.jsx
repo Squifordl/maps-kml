@@ -181,7 +181,7 @@ function MapComponent() {
                                 </div>
                                 <div className="button-container">
                                     <button type="button" onClick={handleNewConsulta}>
-                                        Nova Consulta
+                                        Consultar
                                     </button>
                                     <button type="button" onClick={handlePopupClose}>
                                         Fechar
@@ -212,7 +212,7 @@ function MapComponent() {
                                 <h3 className="viab-message">Seu endereço não está viável</h3>
                                 <div className="button-container">
                                     <button type="button" onClick={handleNewConsulta}>
-                                        Nova Consulta
+                                        Consultar
                                     </button>
                                     <button type="button" onClick={handlePopupClose}>
                                         Fechar
