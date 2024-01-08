@@ -81,6 +81,9 @@
 .popup-container.visible {
     visibility: visible;
     opacity: 1;
+    width: 50%;
+    height: 290px;
+    margin-top: 130px;
 }
 
 .popup-content {
