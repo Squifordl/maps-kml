@@ -94,7 +94,12 @@
 .popup-container form .button-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
+}
+
+.popup-container form .button-container button {
+    width: 48%;
 }
 
 .popup-container label {
