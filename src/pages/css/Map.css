@@ -75,6 +75,7 @@
     transition: visibility 0s, opacity 0.5s linear;
     width: 90%;
     max-width: 400px;
+    margin: 0 auto;
 }
 
 .popup-container.visible {
@@ -163,15 +164,17 @@
 
     .popup-container {
         width: 100%;
-        padding: 10px;
     }
 
-    .popup-container label,
-    .popup-container input {
-        width: 100%;
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
     }
 
     .button-container button {
         width: 100%;
+        margin-bottom: 10px;
     }
 }
