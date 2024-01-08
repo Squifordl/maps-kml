@@ -174,11 +174,13 @@ function MapComponent() {
                         viab ? (
                             <div>
                                 <h3 className="viab-message">Seu endereço está viável</h3>
-                                <p>{`Logradouro: ${enderecoViacep.logradouro}`}</p>
-                                <p>{`Logradouro: ${numeroCasa}`}</p>
-                                <p>{`Bairro: ${enderecoViacep.bairro}`}</p>
-                                <p>{`Cidade: ${enderecoViacep.cidade}`}</p>
-                                <p>{`UF: ${enderecoViacep.uf}`}</p>
+                                <div className="address-info">
+                                    <p>{`Logradouro: ${enderecoViacep.logradouro}`}</p>
+                                    <p>{`Número: ${numeroCasa}`}</p>
+                                    <p>{`Bairro: ${enderecoViacep.bairro}`}</p>
+                                    <p>{`Cidade: ${enderecoViacep.cidade}`}</p>
+                                    <p>{`UF: ${enderecoViacep.uf}`}</p>
+                                </div>
                                 <div className="button-container">
                                     <button type="button" onClick={handleNewConsulta}>
                                         Nova Consulta
@@ -240,9 +242,8 @@ function MapComponent() {
                         </form>
                     )}
                 </div>
-            </div >
-            <div className="map-container" ref={mapRef}>
             </div>
+            <div className="map-container" ref={mapRef}></div>
             <div className="search-container">
                 <input ref={searchBoxRef} className="search-bar" type="text" placeholder="🔍 Pesquisar Endereço..." />
             </div>
