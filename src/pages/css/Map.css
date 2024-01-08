@@ -93,6 +93,8 @@
 
 .popup-container form {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .popup-container label {
