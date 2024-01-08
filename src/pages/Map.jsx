@@ -18,6 +18,7 @@ function MapComponent() {
         cidade: '',
         uf: '',
     });
+    const [showForm, setShowForm] = useState(false);
 
     const handleViabilidadeClick = () => {
         setShowPopup(true);
@@ -27,6 +28,7 @@ function MapComponent() {
         setShowPopup(false);
         setViab(false);
         setViabi(false);
+        setShowForm(false);
     };
 
     const handleNewConsulta = () => {
@@ -35,7 +37,9 @@ function MapComponent() {
         setShowPopup(false);
         setViab(false);
         setViabi(false);
+        setShowForm(true);
     };
+
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
@@ -169,17 +173,35 @@ function MapComponent() {
                         viab ? (
                             <div>
                                 <h3 className="viab-message">Seu endereço está viável</h3>
-                                {/* Mostrar os dados do endereço */}
                                 <p>{`Logradouro: ${enderecoViacep.logradouro}`}</p>
+                                <p>{`Logradouro: ${enderecoViacep.numero}`}</p>
                                 <p>{`Bairro: ${enderecoViacep.bairro}`}</p>
                                 <p>{`Cidade: ${enderecoViacep.cidade}`}</p>
                                 <p>{`UF: ${enderecoViacep.uf}`}</p>
-                                {/* Adicionar o botão "Nova Consulta" */}
                                 <div>
                                     <button type="button" onClick={handleNewConsulta}>
                                         Nova Consulta
                                     </button>
                                 </div>
+                                {showForm && (
+                                    <form onSubmit={handleFormSubmit}>
+                                        <label htmlFor="cep">CEP:</label>
+                                        <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
+                                        <label htmlFor="numeroCasa">Número da Casa:</label>
+                                        <input
+                                            type="text"
+                                            id="numeroCasa"
+                                            value={numeroCasa}
+                                            onChange={(e) => setNumeroCasa(e.target.value)}
+                                        />
+                                        <button type="submit">Enviar</button>
+                                        <div>
+                                            <button type="button" onClick={handlePopupClose}>
+                                                Fechar
+                                            </button>
+                                        </div>
+                                    </form>
+                                )}
                             </div>
                         ) : (
                             <div>
