@@ -27,27 +27,37 @@ function MapComponent() {
         e.preventDefault();
 
         try {
-            const response = await axios.get(`https://api.amxrest.net/viability/${cep}/${numeroCasa}`);
+            const response = await axios.get(
+                `https://api.amxrest.net/viability/${cep}/${numeroCasa}`
+            );
 
             console.log('Response Data:', response.data);
 
-            setViabi(true);
+            // Verificar se o componente ainda está montado
+            if (mapRef.current) {
+                setViabi(true);
 
-            if (response.data.data.technologies.some(tech =>
-                tech.name === 'Cable' && tech.tv && tech.phone && tech.internet)) {
-                setViab(true);
-                console.log('Viab set to true');
-            } else {
-                setViab(false);
-                console.log('Viab set to false');
+                if (
+                    response.data.data.technologies.some(
+                        (tech) => tech.name === 'Cable' && tech.tv && tech.phone && tech.internet
+                    )
+                ) {
+                    setViab(true);
+                    console.log('Viab set to true');
+                } else {
+                    setViab(false);
+                    console.log('Viab set to false');
+                }
+
+                setShowPopup(true);
             }
-
         } catch (error) {
             console.error('Erro na requisição da API:', error);
             setViab(false);
+            setShowPopup(true);
         }
-        setShowPopup(false);
     };
+
 
     useEffect(() => {
         window.initMap = function () {
