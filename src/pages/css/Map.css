@@ -84,11 +84,16 @@
     position: relative;
 }
 
-.question-container,
+.question-container {
+    width: 50%;
+    height: 290px;
+    margin-top: 130px;
+}
+
 .response-container {
     width: 50%;
-    height: auto;
-    margin-top: 20px;
+    height: 290px;
+    margin-top: 130px;
 }
 
 .button-container {
