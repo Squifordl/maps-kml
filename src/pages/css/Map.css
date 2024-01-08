@@ -27,6 +27,7 @@
     border-radius: 4px;
     cursor: pointer;
     z-index: 10;
+
 }
 
 .button-container button:hover {
@@ -61,7 +62,7 @@
 }
 
 .popup-container {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -73,6 +74,8 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
+    width: 40%;
+    height: 180px
 }
 
 .popup-container.visible {
@@ -100,6 +103,11 @@
 
 .popup-container form .button-container button {
     width: 48%;
+    margin-top: 20px;
+}
+
+.popup-container form .button-container button:first-child {
+    margin-right: 2%;
 }
 
 .popup-container label {
@@ -124,10 +132,8 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin: 0 auto;
     display: block;
 }
-
 
 .popup-container button:hover {
     background-color: #0056b3;
