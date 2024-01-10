@@ -57,7 +57,8 @@ const urls = [
     'https://raw.githubusercontent.com/Squifordl/kml/main/PORTO3.kml',
     'https://raw.githubusercontent.com/Squifordl/kml/main/PORTO4.kml',
     'https://raw.githubusercontent.com/Squifordl/kml/main/CARAZINHO.kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/MRALVP.kml'
+    'https://raw.githubusercontent.com/Squifordl/kml/main/MRALVP.kml',
+    'https://raw.githubusercontent.com/Squifordl/kml/main/~GE0000n22756.kmz.kml'
 ]
 
 export default urls
