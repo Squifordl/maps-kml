@@ -43,17 +43,17 @@ function MapComponent() {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
 
+        const cepDigitsOnly = cep.replace(/\D/g, '');
+
         try {
             const response = await axios.get(
-                `https://api.amxrest.net/viability/${cep}/${numeroCasa}`
+                `https://api.amxrest.net/viability/${cepDigitsOnly}/${numeroCasa}`
             );
 
-            const enderecoResponse = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+            const enderecoResponse = await axios.get(`https://viacep.com.br/ws/${cepDigitsOnly}/json/`);
             const dadosViacep = enderecoResponse.data;
 
-
             console.log('Response Data:', dadosViacep);
-
             if (mapRef.current) {
                 setViabi(true);
 
@@ -160,6 +160,12 @@ function MapComponent() {
         }
     }, [scriptURL]);
 
+    const handleCepChange = (e) => {
+        const inputValue = e.target.value;
+        const numericValue = inputValue.replace(/\D/g, '');
+        setCep(numericValue);
+    };
+    
     return (
         <>
             <div className="button-container">
@@ -215,7 +221,7 @@ function MapComponent() {
                         <div className="question-container">
                             <form onSubmit={handleFormSubmit}>
                                 <label htmlFor="cep">CEP:</label>
-                                <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
+                                <input type="text" id="cep" value={cep} onChange={handleCepChange} />
                                 <label htmlFor="numeroCasa">Número da Casa:</label>
                                 <input
                                     type="text"
