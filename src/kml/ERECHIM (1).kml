@@ -128,7 +128,7 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>5</width>
 		</LineStyle>
 		<PolyStyle>
@@ -144,7 +144,7 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>5</width>
 		</LineStyle>
 		<PolyStyle>
@@ -170,7 +170,7 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>5</width>
 		</LineStyle>
 		<PolyStyle>
@@ -186,7 +186,7 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>5</width>
 		</LineStyle>
 		<PolyStyle>
@@ -195,14 +195,14 @@
 	</Style>
 	<Style id="sh_triangle">
 		<IconStyle>
-			<color>ff0000ff</color>
+			<color>7f00ffff</color>
 			<scale>1.4</scale>
 			<Icon>
 				<href>https://maps.google.com/mapfiles/kml/shapes/triangle.png</href>
 			</Icon>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>5</width>
 		</LineStyle>
 		<PolyStyle>
@@ -273,14 +273,14 @@
 	</Style>
 	<Style id="sh_triangle21">
 		<IconStyle>
-			<color>ff0000ff</color>
+			<color>7f00ffff</color>
 			<scale>1.4</scale>
 			<Icon>
 				<href>https://maps.google.com/mapfiles/kml/shapes/triangle.png</href>
 			</Icon>
 		</IconStyle>
 		<LineStyle>
-			<color>ffff0000</color>
+			<color>7f00ffff</color>
 			<width>2</width>
 		</LineStyle>
 		<PolyStyle>
@@ -289,14 +289,14 @@
 	</Style>
 	<Style id="sn_triangle22">
 		<IconStyle>
-			<color>ff0000ff</color>
+			<color>7f00ffff</color>
 			<scale>1.2</scale>
 			<Icon>
 				<href>https://maps.google.com/mapfiles/kml/shapes/triangle.png</href>
 			</Icon>
 		</IconStyle>
 		<LineStyle>
-			<color>ffff0000</color>
+			<color>7f00ffff</color>
 			<width>2</width>
 		</LineStyle>
 		<PolyStyle>
@@ -315,14 +315,14 @@
 	</StyleMap>
 	<Style id="sn_triangle0">
 		<IconStyle>
-			<color>ff0000ff</color>
+			<color>7f00ffff</color>
 			<scale>1.2</scale>
 			<Icon>
 				<href>https://maps.google.com/mapfiles/kml/shapes/triangle.png</href>
 			</Icon>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>5</width>
 		</LineStyle>
 		<PolyStyle>
@@ -341,14 +341,14 @@
 	</StyleMap>
 	<Style id="sn_triangle">
 		<IconStyle>
-			<color>ff0000ff</color>
+			<color>7f00ffff</color>
 			<scale>1.2</scale>
 			<Icon>
 				<href>https://maps.google.com/mapfiles/kml/shapes/triangle.png</href>
 			</Icon>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>5</width>
 		</LineStyle>
 		<PolyStyle>
@@ -377,14 +377,14 @@
 	</StyleMap>
 	<Style id="sh_triangle0">
 		<IconStyle>
-			<color>ff0000ff</color>
+			<color>7f00ffff</color>
 			<scale>1.4</scale>
 			<Icon>
 				<href>https://maps.google.com/mapfiles/kml/shapes/triangle.png</href>
 			</Icon>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>5</width>
 		</LineStyle>
 		<PolyStyle>
@@ -400,7 +400,7 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>5</width>
 		</LineStyle>
 		<PolyStyle>
@@ -416,7 +416,7 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>5</width>
 		</LineStyle>
 		<PolyStyle>

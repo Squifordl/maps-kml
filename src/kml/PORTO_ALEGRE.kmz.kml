@@ -13,11 +13,11 @@
 			<scale>0.6</scale>
 		</LabelStyle>
 		<LineStyle>
-			<color>ffff0000</color>
+			<color>7f00ffff</color>
 			<width>4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>8000ffff</color>
+			<color>7f00ffff</color>
 		</PolyStyle>
 	</Style>
 	<StyleMap id="msn_shaded_dot4">
@@ -41,11 +41,11 @@
 			<scale>0.6</scale>
 		</LabelStyle>
 		<LineStyle>
-			<color>ffff0000</color>
+			<color>7f00ffff</color>
 			<width>4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>8000ffff</color>
+			<color>7f00ffff</color>
 		</PolyStyle>
 	</Style>
 	<Style id="sh_shaded_dot180">
@@ -59,11 +59,11 @@
 			<scale>0.6</scale>
 		</LabelStyle>
 		<LineStyle>
-			<color>ffff0000</color>
+			<color>7f00ffff</color>
 			<width>4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>8000ffff</color>
+			<color>7f00ffff</color>
 		</PolyStyle>
 	</Style>
 	<Style id="sn_shaded_dot20">
@@ -77,11 +77,11 @@
 			<scale>0.6</scale>
 		</LabelStyle>
 		<LineStyle>
-			<color>ffff0000</color>
+			<color>7f00ffff</color>
 			<width>4</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>8000ffff</color>
+			<color>7f00ffff</color>
 		</PolyStyle>
 	</Style>
 	<StyleMap id="msn_shaded_dot40">
@@ -3952,11 +3952,11 @@ Diamante</description>
 								<scale>0.6</scale>
 							</LabelStyle>
 							<LineStyle>
-								<color>ffff0000</color>
+								<color>7f00ffff</color>
 								<width>4</width>
 							</LineStyle>
 							<PolyStyle>
-								<color>8000ffff</color>
+								<color>7f00ffff</color>
 							</PolyStyle>
 						</Style>
 						<Style id="sn_shaded_dot2">
@@ -3970,11 +3970,11 @@ Diamante</description>
 								<scale>0.6</scale>
 							</LabelStyle>
 							<LineStyle>
-								<color>ffff0000</color>
+								<color>7f00ffff</color>
 								<width>4</width>
 							</LineStyle>
 							<PolyStyle>
-								<color>8000ffff</color>
+								<color>7f00ffff</color>
 							</PolyStyle>
 						</Style>
 						<StyleMap id="msn_shaded_dot4">

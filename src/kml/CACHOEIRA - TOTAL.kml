@@ -28,7 +28,7 @@
 			</StyleMap>
 			<Style id="AREA_AGREGACAO1">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -46,7 +46,7 @@
 			</Style>
 			<Style id="AREA_AGREGACAO">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -102,7 +102,7 @@
 			<name>Cachoeira do Sul</name>
 			<Style id="style160">
 				<LineStyle>
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle>
@@ -111,7 +111,7 @@
 			</Style>
 			<Style id="style170">
 				<LineStyle>
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle>
@@ -182,7 +182,7 @@
 			</StyleMap>
 			<Style id="AREA_AGREGACAO2">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -191,7 +191,7 @@
 			</Style>
 			<Style id="AREA_AGREGACAO3">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -210,7 +210,7 @@
 			</StyleMap>
 			<Style id="ATENDIMENTO_SPLITTER_PRI-CLASSE-C_61">
 				<LineStyle id="lATENDIMENTO_SPLITTER_PRI-CLASSE-C_61LineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pATENDIMENTO_SPLITTER_PRI-CLASSE-C_61PolyStyle">
@@ -219,7 +219,7 @@
 			</Style>
 			<Style id="ATENDIMENTO_SPLITTER_PRI-CLASSE-C_611">
 				<LineStyle id="lATENDIMENTO_SPLITTER_PRI-CLASSE-C_61LineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pATENDIMENTO_SPLITTER_PRI-CLASSE-C_61PolyStyle">

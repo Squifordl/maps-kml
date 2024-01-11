@@ -5,7 +5,7 @@
 	<open>1</open>
 	<Style id="sh_shaded_dot15">
 		<IconStyle>
-			<color>ff00ff00</color>
+			<color>7f00ffff</color>
 			<scale>1.16667</scale>
 			<Icon>
 				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
@@ -15,16 +15,16 @@
 			<scale>0.5</scale>
 		</LabelStyle>
 		<LineStyle>
-			<color>ffff0000</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>80ff0000</color>
+			<color>7f00ffff</color>
 		</PolyStyle>
 	</Style>
 	<Style id="sn_shaded_dot21">
 		<IconStyle>
-			<color>ff00ff00</color>
+			<color>7f00ffff</color>
 			<Icon>
 				<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 			</Icon>
@@ -33,11 +33,11 @@
 			<scale>0.5</scale>
 		</LabelStyle>
 		<LineStyle>
-			<color>ffff0000</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>80ff0000</color>
+			<color>7f00ffff</color>
 		</PolyStyle>
 	</Style>
 	<StyleMap id="msn_shaded_dot90">

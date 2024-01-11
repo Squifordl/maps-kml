@@ -9,7 +9,7 @@
 			<name>AT_VBRAA.kmz</name>
 			<Style id="AT_MDVAA0">
 				<LineStyle id="lAT_MDVAALineStyle">
-					<color>ff00ffff</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAT_MDVAAPolyStyle">
@@ -18,7 +18,7 @@
 			</Style>
 			<Style id="AT_MDVAA">
 				<LineStyle id="lAT_MDVAALineStyle">
-					<color>ff00ffff</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAT_MDVAAPolyStyle">
@@ -68,11 +68,11 @@
 						<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 					</IconStyle>
 					<LineStyle>
-						<color>ff00aaff</color>
+						<color>7f00ffff</color>
 						<width>3</width>
 					</LineStyle>
 					<PolyStyle>
-						<color>8000aaff</color>
+						<color>7f00ffff</color>
 					</PolyStyle>
 				</Style>
 				<Style id="s_ylw-pushpin">
@@ -84,11 +84,11 @@
 						<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 					</IconStyle>
 					<LineStyle>
-						<color>ff00aaff</color>
+						<color>7f00ffff</color>
 						<width>3</width>
 					</LineStyle>
 					<PolyStyle>
-						<color>8000aaff</color>
+						<color>7f00ffff</color>
 					</PolyStyle>
 				</Style>
 				<StyleMap id="m_ylw-pushpin">
@@ -504,7 +504,7 @@
 					<open>1</open>
 					<Style id="AREA_AGREGACAO115">
 						<LineStyle id="lAREA_AGREGACAOLineStyle">
-							<color>ff00ffff</color>
+							<color>7f00ffff</color>
 							<width>3</width>
 						</LineStyle>
 						<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -513,7 +513,7 @@
 					</Style>
 					<Style id="AREA_AGREGACAO41">
 						<LineStyle id="lAREA_AGREGACAOLineStyle">
-							<color>ff00ffff</color>
+							<color>7f00ffff</color>
 							<width>3</width>
 						</LineStyle>
 						<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -602,7 +602,7 @@
 					<name>GPON_Projeto_F - GRAVATAÍ.kmz</name>
 					<Style id="normalPlacemark3150312006003310">
 						<IconStyle>
-							<color>ff00ff00</color>
+							<color>7f00ffff</color>
 							<Icon>
 								<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 							</Icon>
@@ -611,16 +611,16 @@
 							<scale>0.3</scale>
 						</LabelStyle>
 						<LineStyle>
-							<color>ffff0000</color>
+							<color>7f00ffff</color>
 							<width>3</width>
 						</LineStyle>
 						<PolyStyle>
-							<color>80ff0000</color>
+							<color>7f00ffff</color>
 						</PolyStyle>
 					</Style>
 					<Style id="normalPlacemark31564010111">
 						<IconStyle>
-							<color>ff00ff00</color>
+							<color>7f00ffff</color>
 							<Icon>
 								<href>https://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
 							</Icon>
@@ -629,11 +629,11 @@
 							<scale>0.3</scale>
 						</LabelStyle>
 						<LineStyle>
-							<color>ffff0000</color>
+							<color>7f00ffff</color>
 							<width>3</width>
 						</LineStyle>
 						<PolyStyle>
-							<color>80ff0000</color>
+							<color>7f00ffff</color>
 						</PolyStyle>
 					</Style>
 					<StyleMap id="normalPlacemark315133160001">

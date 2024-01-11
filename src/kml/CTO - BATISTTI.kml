@@ -44,7 +44,7 @@
 					<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 				</IconStyle>
 				<LineStyle>
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle>
@@ -60,7 +60,7 @@
 					<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 				</IconStyle>
 				<LineStyle>
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle>

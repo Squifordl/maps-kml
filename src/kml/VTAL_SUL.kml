@@ -11,11 +11,11 @@
 			<scale>0</scale>
 		</LabelStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>8000ffff</color>
+			<color>7f00ffff</color>
 		</PolyStyle>
 	</Style>
 	<Style id="PolyStyle00">
@@ -24,11 +24,11 @@
 			<scale>0</scale>
 		</LabelStyle>
 		<LineStyle>
-			<color>ff00ffff</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle>
-			<color>8000ffff</color>
+			<color>7f00ffff</color>
 		</PolyStyle>
 	</Style>
 	<StyleMap id="PolyStyle001">

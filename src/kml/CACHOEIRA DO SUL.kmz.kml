@@ -4,7 +4,7 @@
 	<name>CACHOEIRA DO SUL.kmz</name>
 	<Style id="sh_ylw-pushpin1900">
 		<LineStyle>
-			<color>ff00aaff</color>
+			<color>7f00ffff</color>
 			<width>3.3015</width>
 		</LineStyle>
 		<PolyStyle>
@@ -13,7 +13,7 @@
 	</Style>
 	<Style id="sn_ylw-pushpin25000">
 		<LineStyle>
-			<color>ff00aaff</color>
+			<color>7f00ffff</color>
 			<width>2.201</width>
 		</LineStyle>
 		<PolyStyle>
@@ -29,7 +29,7 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00aaff</color>
+			<color>7f00ffff</color>
 			<width>2.2</width>
 		</LineStyle>
 		<PolyStyle>
@@ -55,7 +55,7 @@
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
 		<LineStyle>
-			<color>ff00aaff</color>
+			<color>7f00ffff</color>
 			<width>2.2</width>
 		</LineStyle>
 		<PolyStyle>

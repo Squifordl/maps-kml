@@ -81,7 +81,7 @@
 			<name>SANTANA_DO_LIVRAMENTO_HID_AGREG</name>
 			<Style id="AREA_AGREGACAO00">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -108,7 +108,7 @@
 			</Style>
 			<Style id="AREA_AGREGACAO2">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -549,7 +549,7 @@
 			</StyleMap>
 			<Style id="AREA_AGREGACAO000">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -558,7 +558,7 @@
 			</Style>
 			<Style id="AREA_AGREGACAO100">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">

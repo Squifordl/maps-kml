@@ -19,7 +19,7 @@
 			</Style>
 			<Style id="AREA_AGREGACAO00">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
 					<color>7f00ff00</color>
@@ -36,7 +36,7 @@
 			</Style>
 			<Style id="AREA_AGREGACAO30">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
 					<color>7f00ff00</color>
@@ -72,7 +72,7 @@
 			</Style>
 			<Style id="AREA_AGREGACAO8">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -91,7 +91,7 @@
 			</StyleMap>
 			<Style id="AREA_AGREGACAO2">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -100,7 +100,7 @@
 			</Style>
 			<Style id="AREA_AGREGACAO9">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -127,7 +127,7 @@
 			</Style>
 			<Style id="AREA_AGREGACAO10">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -136,7 +136,7 @@
 			</Style>
 			<Style id="AREA_AGREGACAO">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -155,7 +155,7 @@
 			</StyleMap>
 			<Style id="AREA_AGREGACAO6">
 				<LineStyle id="lAREA_AGREGACAOLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAREA_AGREGACAOPolyStyle">
@@ -346,7 +346,7 @@
 			</StyleMap>
 			<Style id="POLIGONO">
 				<LineStyle id="lPOLIGONOLineStyle">
-					<color>ffff0000</color>
+					<color>7f00ffff</color>
 				</LineStyle>
 				<PolyStyle id="pPOLIGONOPolyStyle">
 					<color>7fff0000</color>
@@ -359,7 +359,7 @@
 					<open>1</open>
 					<Style id="AT_TOTAL1">
 						<LineStyle id="lAT_TOTALLineStyle">
-							<color>ff00ffff</color>
+							<color>7f00ffff</color>
 						</LineStyle>
 						<PolyStyle id="pAT_TOTALPolyStyle">
 							<color>7f00ffff</color>
@@ -367,7 +367,7 @@
 					</Style>
 					<Style id="AT_TOTAL0">
 						<LineStyle id="lAT_TOTALLineStyle">
-							<color>ff00ffff</color>
+							<color>7f00ffff</color>
 						</LineStyle>
 						<PolyStyle id="pAT_TOTALPolyStyle">
 							<color>7f00ffff</color>
@@ -442,11 +442,11 @@
 					<scale>0</scale>
 				</LabelStyle>
 				<LineStyle>
-					<color>ff0000ff</color>
+					<color>7f00ffff</color>
 					<width>2</width>
 				</LineStyle>
 				<PolyStyle>
-					<color>ff0000ff</color>
+					<color>7f00ffff</color>
 				</PolyStyle>
 			</Style>
 			<Style id="PolyStyle005">
@@ -1102,7 +1102,7 @@
 			<name>Venâncio Aires.kmz</name>
 			<Style id="AT_TOTAL4">
 				<LineStyle id="lAT_TOTALLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAT_TOTALPolyStyle">
@@ -1111,7 +1111,7 @@
 			</Style>
 			<Style id="AT_TOTAL20">
 				<LineStyle id="lAT_TOTALLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAT_TOTALPolyStyle">
@@ -1130,7 +1130,7 @@
 			</StyleMap>
 			<Style id="AT_TOTAL3">
 				<LineStyle id="lAT_TOTALLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAT_TOTALPolyStyle">
@@ -1139,7 +1139,7 @@
 			</Style>
 			<Style id="AT_TOTAL10">
 				<LineStyle id="lAT_TOTALLineStyle">
-					<color>ff00ff00</color>
+					<color>7f00ffff</color>
 					<width>3</width>
 				</LineStyle>
 				<PolyStyle id="pAT_TOTALPolyStyle">

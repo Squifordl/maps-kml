@@ -14,7 +14,7 @@
 	</StyleMap>
 	<Style id="ÁREA A CONSTRUIR2">
 		<LineStyle id="lÁREA A CONSTRUIRLineStyle">
-			<color>ff00ff00</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle id="pÁREA A CONSTRUIRPolyStyle">
@@ -23,7 +23,7 @@
 	</Style>
 	<Style id="ÁREA A CONSTRUIR4">
 		<LineStyle id="lÁREA A CONSTRUIRLineStyle">
-			<color>ff00ff00</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle id="pÁREA A CONSTRUIRPolyStyle">
@@ -61,7 +61,7 @@
 	</StyleMap>
 	<Style id="AT_PGO1">
 		<LineStyle id="lAT_PGOLineStyle">
-			<color>ffff0000</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle id="pAT_PGOPolyStyle">
@@ -80,7 +80,7 @@
 	</StyleMap>
 	<Style id="ÁREA A CONSTRUIR3">
 		<LineStyle id="lÁREA A CONSTRUIRLineStyle">
-			<color>ff00ff00</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle id="pÁREA A CONSTRUIRPolyStyle">
@@ -117,7 +117,7 @@
 	</StyleMap>
 	<Style id="ÁREA A CONSTRUIR">
 		<LineStyle id="lÁREA A CONSTRUIRLineStyle">
-			<color>ff00ff00</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle id="pÁREA A CONSTRUIRPolyStyle">
@@ -135,7 +135,7 @@
 	</Style>
 	<Style id="AT_PGO0">
 		<LineStyle id="lAT_PGOLineStyle">
-			<color>ffff0000</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle id="pAT_PGOPolyStyle">

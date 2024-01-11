@@ -4,7 +4,7 @@
 	<name>Venâncio Aires.kmz</name>
 	<Style id="AT_TOTAL4">
 		<LineStyle id="lAT_TOTALLineStyle">
-			<color>ff00ff00</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle id="pAT_TOTALPolyStyle">
@@ -13,7 +13,7 @@
 	</Style>
 	<Style id="AT_TOTAL2">
 		<LineStyle id="lAT_TOTALLineStyle">
-			<color>ff00ff00</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle id="pAT_TOTALPolyStyle">
@@ -32,7 +32,7 @@
 	</StyleMap>
 	<Style id="AT_TOTAL3">
 		<LineStyle id="lAT_TOTALLineStyle">
-			<color>ff00ff00</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle id="pAT_TOTALPolyStyle">
@@ -41,7 +41,7 @@
 	</Style>
 	<Style id="AT_TOTAL1">
 		<LineStyle id="lAT_TOTALLineStyle">
-			<color>ff00ff00</color>
+			<color>7f00ffff</color>
 			<width>3</width>
 		</LineStyle>
 		<PolyStyle id="pAT_TOTALPolyStyle">
