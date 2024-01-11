@@ -58,7 +58,11 @@ const urls = [
     'https://raw.githubusercontent.com/Squifordl/kml/main/PORTO4.kml',
     'https://raw.githubusercontent.com/Squifordl/kml/main/CARAZINHO.kml',
     'https://raw.githubusercontent.com/Squifordl/kml/main/MRALVP.kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/~GE0000n22756.kmz.kml'
+    'https://raw.githubusercontent.com/Squifordl/kml/main/~GE0000n22756.kmz.kml',
+    'https://raw.githubusercontent.com/Squifordl/kml/main/~GE0004pU6676.kmz.kml',
+    'https://raw.githubusercontent.com/Squifordl/kml/main/~GE0006fW6676.kmz.kml',
+    'https://raw.githubusercontent.com/Squifordl/kml/main/GPON ITAPEMA.kmz.kml',
+    'https://raw.githubusercontent.com/Squifordl/kml/main/GPON CAMBORIU.kml'
 ]
 
 export default urls
