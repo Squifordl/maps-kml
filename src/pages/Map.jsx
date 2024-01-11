@@ -163,9 +163,10 @@ function MapComponent() {
     const handleCepChange = (e) => {
         const inputValue = e.target.value;
         const numericValue = inputValue.replace(/\D/g, '');
-        setCep(numericValue);
+        const cepLimited = numericValue.slice(0, 8);
+        setCep(cepLimited);
     };
-    
+
     return (
         <>
             <div className="button-container">
@@ -193,7 +194,7 @@ function MapComponent() {
                                 {showForm && (
                                     <form onSubmit={handleFormSubmit}>
                                         <label htmlFor="cep">CEP:</label>
-                                        <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
+                                        <input type="text" id="cep" value={cep} onChange={handleCepChange} maxLength={8} />
                                         <label htmlFor="numeroCasa">Número da Casa:</label>
                                         <input
                                             type="text"
