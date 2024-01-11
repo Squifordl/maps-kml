@@ -214,7 +214,6 @@ function MapComponent() {
                     ) : (
                         <div className="question-container">
                             <form onSubmit={handleFormSubmit}>
-                                <p><strong>Importante:</strong>Consulta por CEP unico não funciona!</p>
                                 <label htmlFor="cep">CEP:</label>
                                 <input type="text" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} />
                                 <label htmlFor="numeroCasa">Número da Casa:</label>
