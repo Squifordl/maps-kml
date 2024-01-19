@@ -62,7 +62,9 @@ const urls = [
     'https://raw.githubusercontent.com/Squifordl/kml/main/~GE0004pU6676.kmz.kml',
     'https://raw.githubusercontent.com/Squifordl/kml/main/~GE0006fW6676.kmz.kml',
     'https://raw.githubusercontent.com/Squifordl/kml/main/GPON ITAPEMA.kmz.kml',
-    'https://raw.githubusercontent.com/Squifordl/kml/main/GPON CAMBORIU.kml'
+    'https://raw.githubusercontent.com/Squifordl/kml/main/GPON CAMBORIU.kml',
+    'https://raw.githubusercontent.com/Squifordl/kml/main/TRMM.kml',
+    'https://raw.githubusercontent.com/Squifordl/kml/main/TRAMANDAI TOTAL 1.kml'
 ]
 
 export default urls
